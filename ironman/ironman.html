@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Zone</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #121212;
+            color: #fff;
+        }
+
+        /* ===== Login Style ===== */
+        .login-container {
+            width: 300px;
+            margin: 120px auto;
+            padding: 25px;
+            background: #1e1e1e;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px red;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #ff0000;
+        }
+
+        .login-container input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .login-container button {
+            width: 95%;
+            padding: 10px;
+            border: none;
+            background: red;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .login-container button:hover {
+            background: #e60000;
+        }
+
+        /* ===== Movie List Style ===== */
+        .movie-container {
+            display: none;
+            padding: 30px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .movie-container h1 {
+            text-align: center;
+            color: red;
+        }
+
+        .movie-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .movie-list li {
+            background: #1e1e1e;
+            margin: 6px 0;
+            padding: 10px;
+            border-left: 4px solid red;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- ===== LOGIN PAGE ===== -->
+<div class="login-container" id="loginBox">
+    <h2>Marvel Login</h2>
+    <input type="text" id="user" placeholder="Enter Username" required>
+    <input type="password" id="pass" placeholder="Enter Password" required>
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- ===== MOVIE LIST PAGE ===== -->
+<div class="movie-container" id="moviesBox">
+    <h1>Marvel Cinematic Universe (MCU) - Watch Order</h1>
+    <ul class="movie-list">
+        <li>1. Captain America: The First Avenger</li>
+        <li>2. Captain Marvel</li>
+        <li>3. Iron Man</li>
+        <li>4. Iron Man 2</li>
+        <li>5. The Incredible Hulk</li>
+        <li>6. Thor</li>
+        <li>7. The Avengers</li>
+        <li>8. Iron Man 3</li>
+        <li>9. Thor: The Dark World</li>
+        <li>10. Captain America: The Winter Soldier</li>
+        <li>11. Guardians of the Galaxy</li>
+        <li>12. Avengers: Age of Ultron</li>
+        <li>13. Ant-Man</li>
+        <li>14. Captain America: Civil War</li>
+        <li>15. Doctor Strange</li>
+        <li>16. Spider-Man: Homecoming</li>
+        <li>17. Black Panther</li>
+        <li>18. Thor: Ragnarok</li>
+        <li>19. Avengers: Infinity War</li>
+        <li>20. Avengers: Endgame</li>
+    </ul>
+</div>
+
+<script>
+    function login() {
+        const user = document.getElementById("user").value;
+        const pass = document.getElementById("pass").value;
+
+        if (user !== "" && pass !== "") {
+            document.getElementById("loginBox").style.display = "none";
+            document.getElementById("moviesBox").style.display = "block";
+        } else {
+            alert("Please fill both fields!");
+        }
+    }
+</script>
+
+</body>
+</html>
